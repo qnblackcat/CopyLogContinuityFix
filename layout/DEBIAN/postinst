@@ -1,0 +1,4 @@
+#!/bin/sh
+# pasted is a daemon: Sileo does not restart it, so the hook would only load after a reboot. launchd relaunches it.
+killall -9 pasted 2>/dev/null
+exit 0

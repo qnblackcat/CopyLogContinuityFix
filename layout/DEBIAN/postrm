@@ -1,0 +1,8 @@
+#!/bin/sh
+# On removal only (an upgrade keeps it running): restart pasted so the hook unloads.
+case "$1" in
+	remove|purge)
+		killall -9 pasted 2>/dev/null
+		;;
+esac
+exit 0
